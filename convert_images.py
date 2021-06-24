@@ -2,7 +2,7 @@
 from PIL import Image
 import os, sys
 
-original_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/images"
+original_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/images/"
 new_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/opt/icons/"
 images = os.listdir(original_directory)
 
@@ -11,8 +11,7 @@ for image in images:
     converted_image = image_name + ".jpg"
     if image != converted_image:
         try:
-            with Image.open(image) as im:
+            with Image.open(original_directory + image) as im:
                 im.rotate(270).resize((128,128)).save(new_directory + converted_image)
         except OSError:
-            print("Cannot convert image.", image)
-
+            print("Image conversion failed.", image)
