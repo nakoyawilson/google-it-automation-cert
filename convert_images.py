@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from PIL import Image
-import os, sys
+import os
 
 original_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/images/"
 new_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/opt/icons/"
