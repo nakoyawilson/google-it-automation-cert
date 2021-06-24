@@ -6,6 +6,9 @@ original_directory = "/home/student-01-af640c4e9338/images/"
 new_directory = "/opt/icons/"
 images = os.listdir(original_directory)
 
+if not os.path.exists(new_directory):
+    os.makedirs(new_directory)
+
 for image in images:
     image_name, image_extension = os.path.splitext(image)
     converted_image = image_name + ".jpg"
