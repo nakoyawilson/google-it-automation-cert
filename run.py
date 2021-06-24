@@ -14,5 +14,5 @@ for file in feedback_files:
         feedback_dictionary["name"] = name
         feedback_dictionary["date"] = date
         feedback_dictionary["feedback"] = feedback
-    response = requests.post("http://<corpweb-external-IP>/feedback", data=feedback_dictionary)
+    response = requests.post("http://<corpweb-external-IP>/feedback/", data=feedback_dictionary)
     response.raise_for_status()
