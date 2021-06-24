@@ -2,7 +2,7 @@
 from PIL import Image
 import os
 
-orginal_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/images"
+original_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/images"
 new_directory = "/Users/nakoya/Documents/Python/google-it-automation-cert/opt/icons/"
 for image in original_directory:
     image_name, image_extension = os.path.splitext(image)
