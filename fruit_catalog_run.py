@@ -19,5 +19,5 @@ for text_file in descriptions:
         description_dictionary["weight"] = weight
         description_dictionary["description"] = description
         description_dictionary["image_name"] = image_name
-    response = requests.post("http://[linux-instance-external-IP]/fruits", data=description_dictionary)
+    response = requests.post("http://[linux-instance-external-IP]/fruits/", data=description_dictionary)
     response.raise_for_status()
