@@ -10,7 +10,7 @@ for text_file in descriptions:
     file_name, file_extension = os.path.splitext(text_file)
     image_name = file_name + ".jpeg"
     description_dictionary = {}
-    with open(os.path.join(directory_path, text_file)) as d:
+    with open(os.path.join(directory_path, text_file), 'rb') as d:
         lines = d.read().splitlines()
         name, weight, description = lines
         weight_as_list = weight.split()
