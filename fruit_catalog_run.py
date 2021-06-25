@@ -14,9 +14,7 @@ for text_file in descriptions:
         lines = d.read().splitlines()
         name, weight, description = lines
         weight_as_list = weight.split()
-        for item in weight_as_list:
-            weight_as_list.pop(item[1:])
-        weight = int(weight_as_list)
+        weight = int(weight_as_list[0])
         description_dictionary["name"] = name
         description_dictionary["weight"] = weight
         description_dictionary["description"] = description
